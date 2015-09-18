@@ -48,3 +48,7 @@ if node['postfix']['use_relay_restrictions_maps']
   include_recipe 'postfix::relay_restrictions'
 end
 
+if node['postfix']['use_sender_dependent_relayhost_maps']
+  include_recipe 'postfix::sender_dependent_relayhost_maps'
+end
+

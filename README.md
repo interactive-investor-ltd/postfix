@@ -4,6 +4,8 @@ Installs and configures postfix for client or outbound relayhost, or to do SASL 
 
 On RHEL-family systems, sendmail will be replaced with postfix.
 
+added support for sender_dependent_relayhost_maps, smtp_sasl_password_maps
+
 
 Requirements
 ------------
