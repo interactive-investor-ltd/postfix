@@ -22,7 +22,7 @@ execute 'update-postfix-sender_dependent_relayhost_maps' do
   action :nothing
 end
 
-template node['postfix']['sender_dependent_relayhost_maps'] do
+template node['postfix']['main']['sender_dependent_relayhost_maps'] do
   source 'sender_dependent_relayhost_maps.erb'
   notifies :run, 'execute[update-postfix-sender_dependent_relayhost_maps]'
 end
