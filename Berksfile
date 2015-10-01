@@ -2,7 +2,7 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'chef-cwlogs', git: 'ssh://git@github.com:MikeSchuette/chef-cwlogs.git'
+cookbook 'cwlogs', git: 'git clone git@bitbucket.org:interativeinvestor/opsworks-cloudwatch-logs.git'
 
 group :integration do
   cookbook 'apt'
