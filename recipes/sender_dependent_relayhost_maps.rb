@@ -16,11 +16,11 @@
 
 include_recipe 'postfix::_common'
 
-execute 'update-postfix-sender_dependent_relayhost_maps' do
-  command "postmap #{node['postfix']['main']['sender_dependent_relayhost_maps']}"
-  environment PATH: "#{ENV['PATH']}:/opt/omni/bin:/opt/omni/sbin" if platform_family?('omnios')
-  action :nothing
-end
+#execute 'update-postfix-sender_dependent_relayhost_maps' do
+#  command "postmap #{node['postfix']['main']['sender_dependent_relayhost_maps']}"
+#  environment PATH: "#{ENV['PATH']}:/opt/omni/bin:/opt/omni/sbin" if platform_family?('omnios')
+#  action :nothing
+#end
 
 template node['postfix']['main']['sender_dependent_relayhost_maps'] do
   source 'sender_dependent_relayhost_maps.erb'
